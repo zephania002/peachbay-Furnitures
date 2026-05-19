@@ -242,6 +242,75 @@ section { padding: 8rem 4rem; }
 }
 .newsletter-form button:hover { background: var(--oak-deep); }
 
+
+/* ─── DYNAMIC CATALOG GRID SYSTEM ─── */
+#design-showcase {
+  background: var(--white);
+  padding: 8rem 4rem;
+}
+
+.showcase-header {
+  margin-bottom: 3.5rem;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 3.5rem 2.5rem;
+  transition: opacity 0.4s var(--ease-fluid);
+}
+
+/* Image Container */
+.card-media-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* Actual Images */
+.card-media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+}
+
+/* Placeholder Fix */
+.img-placeholder {
+  display: none;
+}
+
+/* Base Card State with Scale Transition */
+.showcase-item {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.45s var(--ease-fluid), transform 0.45s var(--ease-fluid), layout 0.45s;
+}
+
+/* Filtering Layout State Classes */
+.showcase-item.hide-item {
+  opacity: 0;
+  transform: scale(0.92);
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  width: 0; height: 0; margin: 0; padding: 0; border: none;
+}
+
+/* Responsive Overrides */
+@media (max-width: 968px) {
+  #design-showcase { padding: 6rem 2rem; }
+  .showcase-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  #design-showcase { padding: 4rem 1.2rem; }
+  .showcase-grid { grid-template-columns: 1fr; }
+}
+
 /* ─── NEW PEACHBAY MEGA TYPOGRAPHY FOOTER ─── */
 #grounded-footer {
   background-color: #0b0b0b; /* Deep architectural charcoal black */

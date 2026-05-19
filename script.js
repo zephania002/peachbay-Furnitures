@@ -16,8 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const systemToast = document.getElementById('system-toast');
   const toastTxt = document.getElementById('toast-txt');
 
+  // NEW DESIGN CATALOG SHOWCASE DOM REGISTRY
+  const showcaseChips = document.querySelectorAll('#design-showcase .filter-chip');
+  const showcaseItems = document.querySelectorAll('#design-showcase .showcase-item');
+  const showcaseGrid = document.querySelector('#design-showcase .showcase-grid');
+
   // ─── SMART SCROLL NAVIGATION STYLING ───
   window.addEventListener('scroll', () => {
+    if (!nav) return;
     if (window.scrollY > 50) {
       nav.classList.add('scrolled-view');
     } else {
@@ -63,6 +69,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ─── NEW DYNAMIC DESIGN SHOWCASE CATALOG FILTER ENGINE ───
+  if (showcaseGrid && showcaseChips.length > 0) {
+    showcaseChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        // 1. Shift active classes across button matrix exclusively for this section
+        showcaseChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const filterValue = chip.getAttribute('data-filter');
+
+        // 2. Temporarily soften the grid visibility for a luxurious fade layout blend
+        showcaseGrid.style.opacity = "0.4";
+
+        setTimeout(() => {
+          showcaseItems.forEach(item => {
+            const itemCategory = item.getAttribute('data-category');
+
+            if (filterValue === 'all' || itemCategory === filterValue) {
+              item.classList.remove('hide-item');
+            } else {
+              item.classList.add('hide-item');
+            }
+          });
+          
+          // Restore full clarity to remaining architectural designs
+          showcaseGrid.style.opacity = "1";
+        }, 250); 
+      });
+    });
+  }
+
   // ─── INTERSECTION OBSERVER FOR SCROLL REVEALS ───
   const revealItems = document.querySelectorAll('.reveal');
   const revealOptions = { threshold: 0.1, rootMargin: '0px 0px -30px 0px' };
@@ -71,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
   }, revealOptions);
