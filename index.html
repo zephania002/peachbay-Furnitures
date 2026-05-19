@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- SEO METADATA CRADLE -->
+  <title>Aura Home — Bespoke Architectural Furniture & Sculpted Timber</title>
+  <meta name="description" content="Discover premium handcrafted architectural furniture collections. Custom sustainable hardwoods, minimalist modern aesthetics, and tailored living spaces engineered to remain."/>
+  <meta name="keywords" content="luxury furniture, bespoke wood craftsmanship, modern minimalist lounge, artisan dining tables, sustainable interior design"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://aurahome.com"/>
+  
+  <!-- OPEN GRAPH (SOCIAL SEO) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Aura Home — Bespoke Architectural Furniture"/>
+  <meta property="og:description" content="Handcrafted architectural furniture curated to elevate structural spatial environments."/>
+  <meta property="og:image" content="assets/seo-share-preview.jpg"/>
+
+  <!-- FONTS & STYLES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FIXED BLUR NAVIGATION BAR -->
+  <nav id="main-nav" aria-label="Main Navigation">
+    <a href="#" class="nav-logo" aria-label="Aura Home Homepage">PEACHBAY FURNITURES</a>
+    <ul class="nav-links">
+      <li><a href="#unified-gallery">The Gallery</a></li>
+      <li><a href="#parallax-divider">Aesthetic View</a></li>
+      <li><a href="#newsletter">Studio Ledger</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon" aria-label="Search Collection">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <button class="nav-icon" id="cart-trigger" aria-label="View Shortlist Cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH CINEMATIC BACKGROUND STREAM -->
+  <section id="hero" aria-label="Introduction Screen">
+    <div class="hero-video-wrap">
+      <video id="hero-video" autoplay muted loop playsinline poster="assets/06.jpg">
+        <source src="assets/hero-background.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <p class="hero-eyebrow animate-up">Bespoke Architectural Intent</p>
+      <h1 class="hero-h1 animate-up delay-1">Sculpted <em>Comfort.</em><br>Designed to Remain.</h1>
+      <p class="hero-sub animate-up delay-2">Premium functional art crafted from sustainable regional logs.<br>Explore her complete engineering archive down below.</p>
+      <div class="hero-cta-wrap animate-up delay-3">
+        <button class="btn-primary" id="scroll-to-gallery">Explore Unified Gallery</button>
+        <button class="btn-ghost" id="play-reel-btn">Watch Studio Film</button>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Swipe / Scroll</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE TEXT TICKER STRIP -->
+  <aside class="marquee-strip" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>✦ Premium Hardwood Grain Matching</span>
+      <span>✦ 5-Year Master Craftsmanship Guarantee</span>
+      <span>✦ Worldwide Eco-Insured Delivery</span>
+      <span>✦ Custom Architectural Commissions Open</span>
+      <span>✦ Premium Hardwood Grain Matching</span>
+      <span>✦ 5-Year Master Craftsmanship Guarantee</span>
+    </div>
+  </aside>
+
+  <!-- MAIN UNIFIED GLOBAL INTERACTIVE GALLERY SECTION -->
+  <section id="unified-gallery" aria-labelledby="gallery-heading">
+  <div class="gallery-intro reveal">
+    <div>
+      <span class="section-label">Master Portfolio Showcase</span>
+      <h2 id="gallery-heading" class="section-title">The Complete <em>Studio Archive</em></h2>
+    </div>
+    <p class="section-sub">A single, unified gallery holding all collections. Filter instantly by material type or layout category space below.</p>
+  </div>
+
+  <!-- Live Gallery Category Filters -->
+  <div class="filter-bar reveal">
+    <button class="filter-chip active" data-filter="all">All Media</button>
+    <div class="filter-divider"></div>
+    <button class="filter-chip" data-filter="living">Living</button>
+    <button class="filter-chip" data-filter="dining">Dining</button>
+    <button class="filter-chip" data-filter="bedroom">Bedroom</button>
+    <div class="filter-divider"></div>
+    <button class="filter-chip" data-filter="oak">Oak</button>
+    <button class="filter-chip" data-filter="walnut">Walnut</button>
+  </div>
+
+  <!-- HORIZONTAL SCROLL WINDOW (Optimized for smooth mobile touch-swiping) -->
+  <div class="horizontal-scroll-viewport" id="gallery-scroller">
+    
+    <!-- Card Item 1 -->
+    <article class="gallery-card reveal" data-tags="living oak">
+      <div class="card-media-box" data-name="Halo Lounge Frame" data-price="KES 56,400">
+        <img src="Assets/01.jpg" alt="Halo Lounge Frame in solid oak with ivory bouclé cushions" loading="lazy" class="gallery-img" />
+        <span class="offer-tag">20% Off</span>
+        <button class="shop-now-ico-btn" aria-label="Shop Halo Lounge Frame Now">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="card-detail">
+        <div class="card-header-line">
+          <h3 class="card-title">Halo Lounge Frame</h3>
+          <span class="card-price"><del>KES 70,500</del> KES 56,400</span>
+        </div>
+        <p class="card-desc">Organic low-slung accent seating styled with custom textured ivory bouclé cushions.</p>
+      </div>
+    </article>
+
+    <!-- Card Item 2 -->
+    <article class="gallery-card reveal" data-tags="dining walnut">
+      <div class="card-media-box" data-name="Arc Dining Table" data-price="KES 34,000">
+        <img src="Assets/02.jpg" alt="Arc Dining Table top-down grain detail" loading="lazy" class="gallery-img" />
+        <span class="offer-tag">15% Off</span>
+        <button class="shop-now-ico-btn" aria-label="Shop Arc Dining Table Now">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="card-detail">
+        <div class="card-header-line">
+          <h3 class="card-title">Arc Dining Table</h3>
+          <span class="card-price"><del>KES 40,000</del> KES 34,000</span>
+        </div>
+        <p class="card-desc">FSC Certified architectural American Walnut displaying matching continuous grain flows.</p>
+      </div>
+    </article>
+
+    <!-- Card Item 3 -->
+    <article class="gallery-card reveal" data-tags="bedroom oak">
+      <div class="card-media-box" data-name="Soma Bedside Unit" data-price="KES 920">
+        <img src="Assets/03.jpg" alt="Soma Bedside Unit manual blind-dovetail joinery" loading="lazy" class="gallery-img" />
+        <span class="offer-tag">10% Off</span>
+        <button class="shop-now-ico-btn" aria-label="Shop Soma Bedside unit Now">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="card-detail">
+        <div class="card-header-line">
+          <h3 class="card-title">Soma Bedside Unit</h3>
+          <span class="card-price"><del>KES 1,022</del> KES 920</span>
+        </div>
+        <p class="card-desc">Compact minimalist nightstand highlighting manual blind-dovetail joinery techniques.</p>
+      </div>
+    </article>
+
+    <!-- Card Item 4 -->
+    <article class="gallery-card reveal" data-tags="living walnut">
+      <div class="card-media-box" data-name="Monolith Coffee Table" data-price="KES 2,100">
+        <img src="Assets/04.jpg" alt="Monolith Coffee Table styled with travertine feet" loading="lazy" class="gallery-img" />
+        <span class="offer-tag">25% Off</span>
+        <button class="shop-now-ico-btn" aria-label="Shop Monolith Table Now">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="card-detail">
+        <div class="card-header-line">
+          <h3 class="card-title">Monolith Coffee Table</h3>
+          <span class="card-price"><del>KES 2,800</del> KES 2,100</span>
+        </div>
+        <p class="card-desc">Low-profile modular centerpiece paired cleanly with raw Travertine marble block styling feet.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+  <!-- ADVANCED PARALLAX INTERACTION VIEW DIVIDER -->
+  <section id="parallax-divider" aria-hidden="true">
+    <div class="parallax-bg-layer" id="parallax-bg"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-text-zone">
+      <h2 class="parallax-title">Formed Over Time.</h2>
+      <p class="parallax-lead">Organic timber movements captured beautifully inside responsive digital spaces.</p>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER BLOCK ABOVE FOOTER SPACE -->
+  <section id="newsletter" aria-labelledby="newsletter-heading">
+    <span class="section-label">Studio Ledger</span>
+    <h2 id="newsletter-heading" class="section-title">Follow the <em>Process Logs.</em></h2>
+    <p class="section-sub">Drop your contact mail to receive workshop blueprints, early batch production drops, and design releases.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault();">
+      <input type="email" placeholder="Your premium email address" required aria-label="Email Address for newsletter subscription" />
+      <button type="submit">Join List</button>
+    </form>
+  </section>
+
+  <!-- ELEGANT GROUNDED FOOTER DESIGN -->
+  <footer id="grounded-footer">
+    <!-- Generous open space visual area for clean design balance -->
+    <div class="footer-open-space">
+      <div class="footer-meta-block">
+        <span class="footer-logo">Aura Home</span>
+        <p class="footer-tagline">Architectural scale layouts engineered seamlessly with natural organic timbers.</p>
+      </div>
+      <div class="footer-link-grid">
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#unified-gallery">The Gallery Grid</a></li>
+            <li><a href="#parallax-divider">Aesthetic Film</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Inquiries</h4>
+          <ul class="footer-links">
+            <li><a href="#">Custom Orders</a></li>
+            <li><a href="#">Trade Registry</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grounded Image Shell with Overlay Networks -->
+    <div class="footer-grounded-img-container">
+      <div class="footer-bg-placeholder"><span>Grounded Workshop Landscape Photo Asset Link</span></div>
+      <div class="footer-image-darkener"></div>
+      
+      <div class="footer-content-overlay">
+        <span class="footer-copyright">&copy; 2026 Aura Home. Handcrafted with absolute intent.</span>
+        
+        <!-- Social Icon Clusters -->
+        <div class="footer-social-row">
+          <a href="#" class="social-circle" aria-label="Instagram Profile Link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="Pinterest Board Link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-3.8 19.3c-.1-.8-.1-2 .1-2.9l1.7-7.1s-.4-.9-.4-2.2c0-2 1.2-3.6 2.7-3.6 1.3 0 1.9 1 1.9 2.2 0 1.3-.8 3.2-1.3 5a1.6 1.6 0 001.6 2c2 0 3.5-2.1 3.5-5.1 0-2.7-1.9-4.5-4.7-4.5-3.2 0-5 2.4-5 4.9 0 1 .4 2 1 2.4a.3.3 0 01.1.3l-.3 1.3a.3.3 0 01-.4.2C5 13.7 4.5 12 4.5 9.8c0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.1-.6-2.5-1.3l-.7 2.6c-.3 1-1 2.2-1.5 3A10 10 0 1012 2z"/></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="TikTok Content Feed Link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4h3a4 4 0 0 0 4 4v3a7 7 0 1 1-11-5.71"/></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="YouTube Channel Link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN DYNAMIC IMMERSIVE LIGHTBOX OVERLAY -->
+  <div class="modal-backdrop" id="media-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="modal-close" id="close-lightbox" aria-label="Close Media Viewer">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-inner">
+      <div class="modal-media-wrapper" id="lightbox-display"></div>
+      <div class="modal-meta-row">
+        <h3 class="modal-title" id="lightbox-title">Asset Item</h3>
+        <span class="modal-subtext" id="lightbox-subtext">$0.00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST ALERTS SYSTEM -->
+  <div class="toast" id="system-toast" role="status" aria-live="polite">
+    <div class="toast-dot"></div>
+    <span id="toast-txt">Item status update success.</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
