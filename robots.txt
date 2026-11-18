@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Search and AI answer-engine crawlers are explicitly welcome
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://peachbayfurniture.com/sitemap.xml
